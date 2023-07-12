@@ -8,8 +8,7 @@ import java.net.ServerSocket;
 
 public class Test {
     public static void main(String[] args) {
-        JFrame frame = new JFrame("My Graphics Window");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        serverApp();
 
 
 
