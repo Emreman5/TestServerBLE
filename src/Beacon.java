@@ -5,9 +5,10 @@
 public class Beacon {
     public static final String FIELD_ID = "id";
     public static final String FIELD_MAC = FIELD_ID;
-
     private String id;
     private String mName;
+    private int locationX;
+    private int locationY;
 
 
     private int mTxPower;
@@ -26,7 +27,6 @@ public class Beacon {
         mTxPower = tag.getTxPower();
     }
 
-    /** Getter Methods **/
     public String getId(){
         return id;
     }
@@ -43,7 +43,6 @@ public class Beacon {
         return mTxPower;
     }
 
-    /** Setter Methods **/
     public void setId(String id) {
         this.id = id;
     }
@@ -56,7 +55,22 @@ public class Beacon {
         mTxPower = txPower;
     }
 
-    /** Public Methods **/
+    public int getLocationX() {
+        return locationX;
+    }
+
+    public void setLocationX(int locationX) {
+        this.locationX = locationX;
+    }
+
+    public int getLocationY() {
+        return locationY;
+    }
+
+    public void setLocationY(int locationY) {
+        this.locationY = locationY;
+    }
+
     public double getDistance(int rssi){
         return getDistance((double) rssi);
     }
