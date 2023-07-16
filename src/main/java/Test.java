@@ -1,8 +1,7 @@
+import Models.Beacon;
+import Models.DataTagBLE;
+import Socket.ReceiverSocket;
 
-
-import javax.swing.*;
-import javax.swing.border.CompoundBorder;
-import java.awt.*;
 import java.io.IOException;
 import java.net.ServerSocket;
 

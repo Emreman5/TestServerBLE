@@ -1,3 +1,8 @@
+package Socket;
+
+import Models.Beacon;
+import Models.DataTagBLE;
+
 import javax.xml.crypto.Data;
 import java.io.DataInputStream;
 import java.io.IOException;

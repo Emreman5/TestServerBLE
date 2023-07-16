@@ -1,4 +1,4 @@
-
+package Models;
 //TODO
 // MAP INTEGRASYONU YAPACALAK
 

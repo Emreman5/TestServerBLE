@@ -1,6 +1,8 @@
+package Filter;
+
 import java.io.Serializable;
 
-class KalmanFilter implements Serializable {
+public class KalmanFilter implements Serializable {
     private double R;   //  Process Noise
     private double Q;   //  Measurement Noise
     private double A;   //  State Vector
