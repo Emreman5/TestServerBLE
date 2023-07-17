@@ -1,3 +1,4 @@
+import Manager.BeaconManager;
 import Models.Beacon;
 import Models.DataTagBLE;
 import Socket.ReceiverSocket;
@@ -7,11 +8,11 @@ import java.net.ServerSocket;
 
 public class Test {
     public static void main(String[] args) {
+        for (var item : BeaconManager.getLocationWithTrilateration()) {
+            System.out.println(item);
+        }
+
         serverApp();
-
-
-
-
     }
     private static void A(){
         Beacon b1 = new Beacon("A","B1",20);
