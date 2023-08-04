@@ -15,10 +15,12 @@ public class Beacon {
 
     public Beacon(){}
 
-    public Beacon(String mac, String name, int txPower){
+    public Beacon(String mac, String name, int txPower,int locationX_, int locationY_){
         id = mac;
         mName = name;
         mTxPower = txPower;
+        locationX = locationX_;
+        locationY = locationY_;
     }
 
     public Beacon(Beacon tag){
@@ -76,7 +78,7 @@ public class Beacon {
     }
 
     public double getDistance(double rssi){
-        return Math.pow(10, ((mTxPower - rssi) * 1.0) / 20);
+        return Math.pow(10, ((mTxPower - (rssi))) / (10 * 2.4)) * 100;
     }
 
     @Override

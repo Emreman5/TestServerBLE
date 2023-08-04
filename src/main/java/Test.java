@@ -8,13 +8,9 @@ import java.net.ServerSocket;
 
 public class Test {
     public static void main(String[] args) {
-        for (var item : BeaconManager.getLocationWithTrilateration()) {
-            System.out.println(item);
-        }
-
         serverApp();
     }
-    private static void A(){
+    /*private static void A(){
         Beacon b1 = new Beacon("A","B1",20);
         Beacon b2 = new Beacon("B","B2",25);
         Beacon b3 = new Beacon("C","B3",30);
@@ -42,7 +38,7 @@ public class Test {
         System.out.println(dataTagBLE.getDistanceFiltered());
         System.out.println(dataTagBLE.getDistance());
         System.out.println("------------------");
-    }
+    }*/
     private static void serverApp(){
         int portNumber = 30;
         try {

@@ -10,12 +10,13 @@ import org.apache.commons.math3.linear.RealVector;
 
 
 public class BeaconManager {
-    public static double[] getLocationWithTrilateration(){
+    public static double[] getLocationWithTrilateration(double[][] positions, double[] distances){
 
-        double[][] positions = new double[][] { { 0, 0 }, { 100, 200 }, { 200, 200 }};
-        double[] distances = new double[] { 100000, 100000, 0 };
+        double[][] positionss = new double[][] { { 0, 0 }, { 100, 200 }, { 200, 0 }};
+        double[] distancess = new double[] { 100, 200, 100 };
 
-        NonLinearLeastSquaresSolver solver = new NonLinearLeastSquaresSolver(new TrilaterationFunction(positions, distances), new LevenbergMarquardtOptimizer());
+        NonLinearLeastSquaresSolver solver = new NonLinearLeastSquaresSolver(new TrilaterationFunction(positions,
+                distances), new LevenbergMarquardtOptimizer());
         Optimum optimum = solver.solve();
 
         // the answer
